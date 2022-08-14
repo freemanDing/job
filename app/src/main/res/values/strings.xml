@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Hilton Job</string>
+
+    <!--网络加载状态-->
+    <string name="net_error">网络访问错误，请稍后再试</string>
+    <string name="empty">还没有数据哦</string>
+    <string name="loading">请稍后...</string>
+    <string name="reload">重新尝试</string>
+    <string name="no_net">网络无法链接，请检查您的网络状态</string>
+    <string name="job_title">职位列表</string>
+    <string name="str_title">Engineering Manager</string>
+    <string name="str_name">Prisma</string>
+    <string name="str_description">Nurture and grow the Prisma development team. In the coming year we will grow from two small teams with an informal leadership structure to several full teams.</string>
+    <string name="str_search_hint">Developer</string>
+    <string name="str_start">欢迎使用</string>
+    <string name="str_job_detail_title">Position Detail</string>
+    <string name="str_data_error">Data Error</string>
+</resources>
