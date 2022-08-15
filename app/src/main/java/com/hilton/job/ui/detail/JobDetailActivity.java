@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.hilton.job.R;
@@ -42,14 +43,14 @@ public class JobDetailActivity extends AppCompatActivity {
         }
         companyIconIV = findViewById(R.id.companyIconIV);
         companyNameTV = findViewById(R.id.companyNameTV);
-        ((TextView) findViewById(R.id.titleTV)).setText(mItemData.getTitle());
+        ((TextView) findViewById(R.id.titleTV)).setText("Position:" + mItemData.getTitle());
 
         if (mItemData.getCompany() != null) {
 
             if (TextUtils.isEmpty(mItemData.getCompany().getName()))
                 companyNameTV.setVisibility(View.GONE);
             else
-                companyNameTV.setText(mItemData.getCompany().getName());
+                companyNameTV.setText("Company:" + mItemData.getCompany().getName());
 
             if (TextUtils.isEmpty(mItemData.getCompany().getLogoUrl()))
                 companyIconIV.setVisibility(View.GONE);

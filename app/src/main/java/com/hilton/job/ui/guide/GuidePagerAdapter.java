@@ -1,5 +1,6 @@
 package com.hilton.job.ui.guide;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.hilton.job.R;
-import com.hilton.job.ui.main.MainActivity;
+import com.hilton.job.ui.job.JobListActivity;
 
 import java.util.List;
 
@@ -42,7 +43,11 @@ public class GuidePagerAdapter extends RecyclerView.Adapter {
             Glide.with(mContext).load(resourceId).into(guideHolder.guideIV);
             if (position == mData.size() - 1) {
                 guideHolder.startBtn.setVisibility(View.VISIBLE);
-                guideHolder.startBtn.setOnClickListener(v -> mContext.startActivity(new Intent(mContext, MainActivity.class)));
+                guideHolder.startBtn.setOnClickListener(v ->
+                {
+                    mContext.startActivity(new Intent(mContext, JobListActivity.class));
+                    ((Activity) mContext).finish();
+                });
             }
         }
     }

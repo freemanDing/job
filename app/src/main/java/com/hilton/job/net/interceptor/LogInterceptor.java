@@ -18,10 +18,6 @@ import static okhttp3.internal.Util.UTF_8;
 
 import com.hilton.job.utils.DebugLog;
 
-/**
- * Desc:日志拦截器
- * Created by fww on 2019/3/29
- */
 public class LogInterceptor implements Interceptor {
     private SimpleDateFormat format;
 

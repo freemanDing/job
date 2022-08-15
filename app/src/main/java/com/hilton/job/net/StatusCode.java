@@ -1,9 +1,5 @@
 package com.hilton.job.net;
 
-/**
- * Desc: 状态码约定
- * Created by fww on 2019/3/4
- */
 public class StatusCode {
     /**
      * 数据请求成功

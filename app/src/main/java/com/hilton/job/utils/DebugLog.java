@@ -5,11 +5,6 @@ import android.util.Log;
 
 import com.hilton.job.BuildConfig;
 
-
-/**
- * Desc:log封装类
- * Created by fww on 2019/3/29
- */
 public class DebugLog {
 
     /**

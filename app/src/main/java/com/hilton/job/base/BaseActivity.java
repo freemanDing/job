@@ -10,14 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hilton.job.utils.ToastUtil;
 
-/**
- * 类描述
- *
- * @author Veer
- * @email 276412667@qq.com
- * @date 18/7/2
- */
-
 public abstract class BaseActivity<P extends BaseContract.IPresenter> extends AppCompatActivity implements BaseContract.IView {
     protected Activity mContext;
     protected P mPresenter;
@@ -27,7 +19,6 @@ public abstract class BaseActivity<P extends BaseContract.IPresenter> extends Ap
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(getActivityLayoutID());
-        //强制竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mContext = this;
         mPresenter = initPresenter();

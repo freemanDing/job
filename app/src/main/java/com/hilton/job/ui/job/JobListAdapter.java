@@ -1,11 +1,9 @@
-package com.hilton.job.ui.main;
+package com.hilton.job.ui.job;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.provider.CalendarContract;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,14 +22,14 @@ import com.hilton.job.ui.detail.JobDetailActivity;
 
 import java.util.List;
 
-public class JobAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class JobListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Job> mData;
     private final Context mContext;
     private LayoutInflater mInflater;
 
 
-    public JobAdapter(Context context, List<Job> data) {
+    public JobListAdapter(Context context, List<Job> data) {
         this.mData = data;
         this.mContext = context;
         mInflater = LayoutInflater.from(context);
@@ -40,7 +38,7 @@ public class JobAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @NonNull
     @Override
     public JobHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_job, parent, false);
+        View view = mInflater.inflate(R.layout.layout_item_job, parent, false);
         return new JobHolder(view);
     }
 
@@ -53,11 +51,18 @@ public class JobAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             jobHolder.descriptionTV.setText(Html.fromHtml(jobItemData.getDescription()));
             if (jobItemData.getCompany() != null) {
                 jobHolder.nameTV.setText(jobItemData.getCompany().getName());
-                Glide.with(mContext)
-                        .load(jobItemData.getCompany().getLogoUrl())
-                        .apply(new RequestOptions().placeholder(R.drawable.placeholder))
-                        .into(jobHolder.iconIV);
+
+                if (TextUtils.isEmpty(jobItemData.getCompany().getLogoUrl()))
+                    jobHolder.iconIV.setVisibility(View.GONE);
+                else {
+                    jobHolder.iconIV.setVisibility(View.VISIBLE);
+                    Glide.with(mContext)
+                            .load(jobItemData.getCompany().getLogoUrl())
+                            .apply(new RequestOptions().placeholder(R.drawable.placeholder))
+                            .into(jobHolder.iconIV);
+                }
             }
+
             jobHolder.rootLayout.setOnClickListener(v -> {
                 Intent intent = new Intent(mContext, JobDetailActivity.class);
                 intent.putExtra("itemData", jobItemData);

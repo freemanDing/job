@@ -6,10 +6,6 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Desc: 请求头拦截器
- * Created by fww on 2019/3/29
- */
 public class HeadRequestInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {

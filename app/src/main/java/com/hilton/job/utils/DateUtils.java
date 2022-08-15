@@ -13,11 +13,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 
-/**
- * 作者：veer
- * 日期：2017/8/17 13:49
- * 功能：日期、时间工具类
- */
 public class DateUtils {
 
     //缓存时间

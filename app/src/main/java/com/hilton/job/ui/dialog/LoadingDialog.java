@@ -9,12 +9,6 @@ import android.widget.TextView;
 
 import com.hilton.job.R;
 
-
-/**
- * description:弹窗浮动加载进度条
- * Created by xsf
- * on 2016.07.17:22
- */
 public class LoadingDialog {
     /**
      * 加载数据对话框

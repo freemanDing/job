@@ -10,8 +10,9 @@ import android.os.Message;
 import android.view.WindowManager;
 
 import com.hilton.job.R;
+import com.hilton.job.constant.Constants;
 import com.hilton.job.ui.guide.GuideActivity;
-import com.hilton.job.ui.main.MainActivity;
+import com.hilton.job.ui.job.JobListActivity;
 import com.hilton.job.utils.PreferencesUtils;
 
 public class LauncherActivity extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_launcher);
-        isFirstIn = PreferencesUtils.getBoolean(LauncherActivity.this, "isFirstIn", true);
+        isFirstIn = PreferencesUtils.getBoolean(LauncherActivity.this, Constants.KEY_GUIDE_FIRST_IN_STATUS, true);
         if (!isFirstIn) {
             mHandler.sendEmptyMessageDelayed(GO_HOME, SPLASH_DELAY_MILLIS);
         } else {
@@ -39,7 +40,7 @@ public class LauncherActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case GO_HOME:
-                    startActivity(new Intent(LauncherActivity.this, MainActivity.class));
+                    startActivity(new Intent(LauncherActivity.this, JobListActivity.class));
                     break;
                 case GO_GUIDE:
                     startActivity(new Intent(LauncherActivity.this, GuideActivity.class));

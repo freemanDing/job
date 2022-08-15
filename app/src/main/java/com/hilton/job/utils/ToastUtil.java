@@ -5,10 +5,6 @@ import android.widget.Toast;
 
 import com.hilton.job.MyApplication;
 
-
-/**
- * Toast统一管理类
- */
 public class ToastUtil {
 
     private static Toast toast;

@@ -6,7 +6,27 @@
     <ImageView
         android:id="@+id/guideIV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/iconIV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@mipmap/icon_launcher_round" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconIV"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/str_hotel_idea"
+        android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/startBtn"

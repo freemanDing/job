@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_search_box.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/bg_white_shape.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btn_invest_button.xml" value="0.1165" />
@@ -14,10 +15,13 @@
         <entry key="app/src/main/res/layout/activity_job_detail.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_launcher.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23622047244094488" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/dialog_loading.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_job.xml" value="0.19672131147540983" />
         <entry key="app/src/main/res/layout/layout_guide.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/layout_item_history_search.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/layout_item_job.xml" value="0.23958333333333334" />
       </map>
     </option>
   </component>

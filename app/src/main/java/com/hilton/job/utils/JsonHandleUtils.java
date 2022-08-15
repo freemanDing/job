@@ -1,10 +1,5 @@
 package com.hilton.job.utils;
 
-/**
- * json数据处理解析
- * Created by Veer
- * date 18/1/11.
- */
 public class JsonHandleUtils {
     private static String getLevelStr(int level) {
         StringBuffer levelStr = new StringBuffer();

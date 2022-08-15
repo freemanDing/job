@@ -3,14 +3,6 @@ package com.hilton.job.base;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-/**
- * 基础配置约定
- *
- * @author Veer
- * @email 276412667@qq.com
- * @date 18/7/2
- */
-
 public interface BaseContract {
 
     interface IPresenter<T extends IView> extends LifecycleObserver {
@@ -44,10 +36,5 @@ public interface BaseContract {
          * 重试
          */
         void onRetry();
-
-    }
-
-    interface IModel {
-
     }
 }

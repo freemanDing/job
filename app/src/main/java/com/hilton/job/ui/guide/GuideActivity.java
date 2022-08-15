@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.hilton.job.R;
+import com.hilton.job.constant.Constants;
 import com.hilton.job.utils.PreferencesUtils;
 
 import java.util.ArrayList;
@@ -23,10 +24,8 @@ public class GuideActivity extends AppCompatActivity {
         guideVP = findViewById(R.id.guideVP);
 
         mResourceList = new ArrayList<>();
-        mResourceList.add(R.drawable.guide);
-        mResourceList.add(R.drawable.guide);
-        mResourceList.add(R.drawable.guide);
-        mResourceList.add(R.drawable.guide);
+        mResourceList.add(R.drawable.guide_1);
+        mResourceList.add(R.drawable.guide_2);
         GuidePagerAdapter guidePagerAdapter = new GuidePagerAdapter(this, mResourceList);
         guideVP.setAdapter(guidePagerAdapter);
         setGuided();
@@ -37,6 +36,6 @@ public class GuideActivity extends AppCompatActivity {
      * @return_type void
      */
     private void setGuided() {
-        PreferencesUtils.putBoolean(GuideActivity.this, "isFirstIn", false);
+        PreferencesUtils.putBoolean(GuideActivity.this, Constants.KEY_GUIDE_FIRST_IN_STATUS, false);
     }
 }

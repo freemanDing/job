@@ -17,10 +17,6 @@ public class JobRequest {
     }
 
     public void setQuery(String query) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("{jobs(input: {type: \"");
-        sb.append(query);
-        sb.append("\"}) {title company {name logoUrl} description}}");
-        this.query = sb.toString();
+        this.query = query;
     }
 }
