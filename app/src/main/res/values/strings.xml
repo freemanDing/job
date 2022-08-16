@@ -19,6 +19,6 @@
     <string name="str_data_empty">Input data empty</string>
     <string name="str_job_search_title">Job Search</string>
     <string name="str_search_history">Search History</string>
-    <string name="str_numbers_positions">Number of positions:%s</string>
+    <string name="str_numbers_positions">Number of positions:</string>
     <string name="str_graphql_query">{jobs(input: {type: \"%s\"}) {title company {name logoUrl} description}}</string>
 </resources>

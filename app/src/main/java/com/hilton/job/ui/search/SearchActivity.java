@@ -69,7 +69,7 @@ public class SearchActivity extends AppCompatActivity {
                 saveHistorySearchData(searchText);
                 Intent intent = new Intent();
                 intent.putExtra(Constants.KEY_SEARCH_CONTENT, searchText);
-                setResult(Constants.SEARCH_RESULT_CODE, intent);
+                setResult(RESULT_OK, intent);
                 this.finish();
             } else {
                 ToastUtil.showShort(getString(R.string.str_data_empty));

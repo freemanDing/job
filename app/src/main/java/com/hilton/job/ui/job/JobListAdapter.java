@@ -77,8 +77,9 @@ public class JobListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public void setData(List<Job> data) {
-        this.mData = data;
-        notifyDataSetChanged();
+        this.mData.clear();
+        this.mData.addAll(data);
+        this.notifyDataSetChanged();
     }
 
     public class JobHolder extends RecyclerView.ViewHolder {
